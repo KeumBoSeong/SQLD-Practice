@@ -1,0 +1,37 @@
+# IN 연산자 포함
+# 직업이 'MANAGER' 또는 'SALESMAN'또는 'CLERK'
+
+SELECT * FROM EMP
+WHERE JOB IN ('MANAGER', 'SALESMAN', 'CLERK');
+
+# 전체 부정
+SELECT * FROM EMP
+WHERE JOB NOT IN ('MANAGER', 'SALESMAN', 'CLERK');
+
+# 등가 비교 OR을 이용 해서 동일하게 만들려면
+SELECT * FROM EMP
+WHERE JOB != 'MANAGER' AND JOB <> 'SALESMAN' AND JOB <> 'CLERK';
+
+# BETWEEN A AND B
+# 급여가 2000 이상 3000 이하
+SELECT * FROM EMP
+WHERE SAL BETWEEN 2000 AND 3000;
+
+
+SELECT * FROM EMP
+WHERE SAL >= 2000 AND SAL <= 3000;
+
+
+# 문자열 포함
+SELECT * FROM EMP
+WHERE ENAME LIKE 'S%';
+
+
+# 사원 이름의 두 번째 글자가 L인 사원만 출력하세요.
+SELECT * FROM EMP
+WHERE ENAME LIKE '_L%';
+
+
+# 사원 이름에 AM 문자가 포함 되어 있는 사원 정보 출력
+SELECT * FROM EMP
+WHERE ENAME LIKE '%AM%';
